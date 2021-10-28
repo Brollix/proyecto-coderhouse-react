@@ -7,8 +7,8 @@ function App() {
 			<header className="App-header">
 				<img src={logo} className="App-logo" alt="logo" />
 				<p>
-					Soy Agustin Brollo, en el siguiente link en celeste les dejo
-					mi repositorio de GitHub:
+					Soy Agustin Brollo, en el siguiente link les dejo mi
+					repositorio de GitHub:
 				</p>
 				<a
 					className="App-link"
@@ -16,7 +16,7 @@ function App() {
 					target="_blank"
 					rel="noopener noreferrer"
 				>
-					Brollix
+					GitHub
 				</a>
 			</header>
 		</div>
