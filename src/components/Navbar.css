@@ -1,5 +1,6 @@
 body {
 	background-color: white;
+	font-size: 18px;
 }
 
 .fa-desktop {
@@ -21,19 +22,17 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 1.2rem;
 }
 
 .navbar-logo {
-	font-size: 20px;
-	color: white;
+	color: #defff2;
 	justify-self: start;
 	margin-left: 20px;
 	cursor: pointer;
 }
 
 .fa-desktop {
-	color: white;
+	color: #defff2;
 	margin-left: 1rem;
 	font-size: 1.6rem;
 }
@@ -49,17 +48,17 @@ body {
 }
 
 .nav-links {
-	color: white;
+	color: #defff2;
 	text-decoration: none;
 	padding: 0.5rem 1rem;
 }
 
 .fa-bars {
-	color: white;
+	color: #defff2;
 }
 
 .nav-links {
-	color: white;
+	color: #defff2;
 	text-decoration: none;
 	padding: 0.5rem 1rem;
 }
@@ -112,7 +111,7 @@ body {
 		border-radius: 4px;
 		width: 80%;
 		text-decoration: none;
-		color: white;
+		color: #defff2;
 	}
 
 	.nav-links:hover,
@@ -149,6 +148,6 @@ body {
 		border-radius: 4px;
 		width: 80%;
 		text-decoration: none;
-		color: white;
+		color: #defff2;
 	}
 }
