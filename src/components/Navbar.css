@@ -14,20 +14,10 @@ body {
 	padding: 1rem 1.5rem;
 }
 
-.fa-desktop {
-	animation: icon-spin infinite 5s linear;
+.fa-ethereum {
 	color: #defff2;
 	padding: 1rem;
 	font-size: 1.6rem;
-}
-
-@keyframes icon-spin {
-	0% {
-		transform: rotate(0);
-	}
-	100% {
-		transform: rotate(360deg);
-	}
 }
 
 .navbar-logo {
@@ -39,5 +29,6 @@ body {
 
 .fa-shopping-cart,
 .fa-bars {
+	color: #defff2;
 	font-size: 32px;
 }
