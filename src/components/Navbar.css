@@ -36,3 +36,8 @@ body {
 	margin-left: 25px;
 	cursor: pointer;
 }
+
+.fa-shopping-cart,
+.fa-bars {
+	font-size: 32px;
+}
