@@ -5,8 +5,8 @@ export default function Navbar() {
 	return (
 		<nav className="NavbarItems">
 			<h1 className="navbar-logo">
-				<i className="fas fa-desktop" />
-				BlackComponents
+				<i className="fa-2x fab fa-ethereum" />
+				Monte Crypto
 			</h1>
 
 			<div className="container">
