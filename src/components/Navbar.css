@@ -1,10 +1,24 @@
 body {
-	background-color: white;
-	font-size: 18px;
+	background-color: rgb(1, 20, 48);
+}
+
+.NavbarItems {
+	background: linear-gradient(
+		135deg,
+		rgb(21, 21, 206),
+		rgb(119, 173, 216) 85%
+	);
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 1rem 1.5rem;
 }
 
 .fa-desktop {
 	animation: icon-spin infinite 5s linear;
+	color: #defff2;
+	padding: 1rem;
+	font-size: 1.6rem;
 }
 
 @keyframes icon-spin {
@@ -21,10 +35,4 @@ body {
 	justify-self: start;
 	margin-left: 25px;
 	cursor: pointer;
-}
-
-.fa-desktop {
-	color: #defff2;
-	margin-left: 1rem;
-	font-size: 1.6rem;
 }
