@@ -2,7 +2,7 @@ import React from 'react';
 import CartWidget from '../../components/CartWidget/CartWidget.js';
 import './Navbar.css';
 
-export default function Navbar() {
+export const Navbar = () => {
 	return (
 		<nav className="NavbarItems">
 			<h1 className="navbar-logo">
@@ -17,4 +17,4 @@ export default function Navbar() {
 			</div>
 		</nav>
 	);
-}
+};
