@@ -1,4 +1,5 @@
 import React from 'react';
+import CartWidget from '../../components/CartWidget/CartWidget.js';
 import './Navbar.css';
 
 export default function Navbar() {
@@ -9,9 +10,7 @@ export default function Navbar() {
 				Monte Crypto
 			</h1>
 
-			<div className="container">
-				<span className="fas fa-shopping-cart" />
-			</div>
+			<CartWidget />
 
 			<div className="menu-icon">
 				<i className="fas fa-bars" />
