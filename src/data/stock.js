@@ -1,11 +1,11 @@
-let productos = [
+export const stock = [
 	{
 		ID: 0,
 		Tipo: 'CPU',
 		Marca: 'Intel Core',
 		Serie: 'i3',
 		Socket: ['1151', 'DDR3'],
-		Imagen: '/img/i3.png',
+		Imagen: '../data/img/i3.png',
 		Precio: 160,
 	},
 	{
@@ -14,7 +14,7 @@ let productos = [
 		Marca: 'Intel Core',
 		Serie: 'i5',
 		Socket: ['1151', 'DDR3'],
-		Imagen: './img/i5.png',
+		Imagen: './data/img/i5.png',
 		Precio: 235,
 	},
 	{
@@ -23,7 +23,7 @@ let productos = [
 		Marca: 'Intel Core',
 		Serie: 'i7',
 		Socket: ['1200', 'DDR4'],
-		Imagen: './img/i7.png',
+		Imagen: './data/img/i7.png',
 		Precio: 320,
 	},
 	{
@@ -32,7 +32,7 @@ let productos = [
 		Marca: 'Intel Core',
 		Serie: 'i9',
 		Socket: ['1200', 'DDR4'],
-		Imagen: './img/i9.png',
+		Imagen: './data/img/i9.png',
 		Precio: 420,
 	},
 	{
@@ -41,7 +41,7 @@ let productos = [
 		Marca: 'AMD Ryzen',
 		Serie: '3',
 		Socket: ['AM4', 'DDR4'],
-		Imagen: './img/r3.png',
+		Imagen: './data/img/r3.png',
 		Precio: 200,
 	},
 	{
@@ -50,7 +50,7 @@ let productos = [
 		Marca: 'AMD Ryzen',
 		Serie: '5',
 		Socket: ['AM4', 'DDR4'],
-		Imagen: './img/r5.png',
+		Imagen: './data/img/r5.png',
 		Precio: 300,
 	},
 	{
@@ -59,7 +59,7 @@ let productos = [
 		Marca: 'AMD Ryzen',
 		Serie: '7',
 		Socket: ['AM4', 'DDR4'],
-		Imagen: './img/r7.png',
+		Imagen: './data/img/r7.png',
 		Precio: 400,
 	},
 	{
@@ -68,7 +68,7 @@ let productos = [
 		Marca: 'AMD Ryzen',
 		Serie: '9',
 		Socket: ['AM4', 'DDR4'],
-		Imagen: './img/r9.png',
+		Imagen: './data/img/r9.png',
 		Precio: 560,
 	},
 	{
@@ -77,7 +77,7 @@ let productos = [
 		Marca: 'Asus',
 		Serie: 'B85',
 		Socket: ['1151', 'DDR3'],
-		Imagen: './img/B85.png',
+		Imagen: './data/img/B85.png',
 		Precio: 80,
 	},
 	{
@@ -86,7 +86,7 @@ let productos = [
 		Marca: 'Gigabyte',
 		Serie: 'Z370',
 		Socket: ['1200', 'DDR4'],
-		Imagen: './img/Z370.png',
+		Imagen: './data/img/Z370.png',
 		Precio: 130,
 	},
 	{
@@ -95,7 +95,7 @@ let productos = [
 		Marca: 'Gigabyte',
 		Serie: 'Z590',
 		Socket: ['1200', 'DDR4'],
-		Imagen: './img/Z590.png',
+		Imagen: './data/img/Z590.png',
 		Precio: 240,
 	},
 	{
@@ -104,7 +104,7 @@ let productos = [
 		Marca: 'Asus',
 		Serie: 'B550',
 		Socket: ['AM4', 'DDR4'],
-		Imagen: './img/B550.png',
+		Imagen: './data/img/B550.png',
 		Precio: 195,
 	},
 	{
@@ -113,7 +113,7 @@ let productos = [
 		Marca: 'Asus',
 		Serie: 'X570',
 		Socket: ['AM4', 'DDR4'],
-		Imagen: './img/X570.png',
+		Imagen: './data/img/X570.png',
 		Precio: 330,
 	},
 	{
@@ -122,7 +122,7 @@ let productos = [
 		Marca: 'Gigabyte',
 		Serie: 'A570',
 		Socket: ['AM4', 'DDR4'],
-		Imagen: './img/A570.png',
+		Imagen: './data/img/A570.png',
 		Precio: 250,
 	},
 	{
@@ -132,7 +132,7 @@ let productos = [
 		Serie: 'Fury',
 		Socket: ['All', 'DDR3'],
 		Tamaño: '8',
-		Imagen: './img/Fury.png',
+		Imagen: './data/img/Fury.png',
 		Precio: 80,
 	},
 	{
@@ -142,9 +142,7 @@ let productos = [
 		Serie: 'Predator',
 		Socket: ['All', 'DDR4'],
 		Tamaño: '16',
-		Imagen: './img/Predator.png',
+		Imagen: './data/img/Predator.png',
 		Precio: 150,
 	},
 ];
-
-export default productos;

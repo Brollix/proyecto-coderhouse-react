@@ -4,7 +4,9 @@ export const Contenedor = ({ children }) => {
 	return (
 		<div
 			style={{
-				width: '50%',
+				display: 'grid',
+				gridTemplateColumns: '1fr 1fr 1fr 1fr',
+				width: '75%',
 				margin: 'auto',
 			}}
 		>
