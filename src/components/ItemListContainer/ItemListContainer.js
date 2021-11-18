@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { fetchData } from '../../helpers/fetchData';
 import Card from '@mui/material/Card';
 import { CardMedia, CircularProgress, Typography } from '@mui/material';
-import { Box, height } from '@mui/system';
+import { Box } from '@mui/system';
 
 export const ItemListContainer = () => {
 	const [loading, setLoading] = useState(false);
