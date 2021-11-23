@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { fetchData } from '../../helpers/fetchData';
 import Card from '@mui/material/Card';
 import { CardMedia, CircularProgress, Typography } from '@mui/material';
+// import { Button } from '@mui/material';
 import { Box } from '@mui/system';
 
 export const ItemListContainer = () => {
@@ -34,19 +35,25 @@ export const ItemListContainer = () => {
 				</Box>
 			) : (
 				productos.map((prod) => (
-					<Card key={prod.id} sx={{ width: 250, height: 250 }}>
+					<Card key={prod.id} className="card">
 						<CardMedia
-							image="../../data/img/i3.png"
-							height="140"
-							alt={(prod.Marca, prod.Serie)}
+							className="media"
+							component="img"
+							image={
+								require(`../../data/img/${prod.Imagen}`).default
+							}
+							alt={prod.Imagen}
 						/>
+						<Typography variant="body2" color="initial">
+							{prod.Tipo}
+						</Typography>
 						<Typography
 							gutterBottom
 							variant="h4"
 							color="initial"
 							component="div"
 						>
-							{(prod.Marca, prod.Serie)}
+							{prod.Marca + ' ' + prod.Serie}
 						</Typography>
 						<Typography variant="body1" color="initial">
 							USD${prod.Precio}
