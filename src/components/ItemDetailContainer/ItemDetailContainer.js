@@ -8,16 +8,6 @@ export const ItemDetailContainer = () => {
 	const [productos, setProductos] = useState([]);
 	const [index, setIndex] = useState(0);
 
-	useEffect(() => {
-		fetchData()
-			.then((resp) => {
-				setProductos(resp);
-			})
-			.catch((error) => {
-				console.log(error);
-			});
-	}, []);
-
 	const handleAnterior = () => {
 		if (index > 0) {
 			setIndex(index - 1);
@@ -28,6 +18,16 @@ export const ItemDetailContainer = () => {
 			setIndex(index + 1);
 		}
 	};
+
+	useEffect(() => {
+		fetchData()
+			.then((resp) => {
+				setProductos(resp);
+			})
+			.catch((error) => {
+				console.log(error);
+			});
+	}, []);
 
 	return (
 		<div>
