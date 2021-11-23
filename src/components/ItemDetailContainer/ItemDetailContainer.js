@@ -29,6 +29,8 @@ export const ItemDetailContainer = () => {
 			});
 	}, []);
 
+	console.log(productos[index].Marca);
+
 	return (
 		<div>
 			<Card key={productos[index].id} className="card">
