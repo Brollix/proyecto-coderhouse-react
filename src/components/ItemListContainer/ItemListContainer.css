@@ -2,3 +2,8 @@
 	max-width: 200px;
 	max-height: 400px;
 }
+
+.media {
+	width: 150px;
+	height: auto;
+}

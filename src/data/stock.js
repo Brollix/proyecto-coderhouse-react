@@ -1,6 +1,5 @@
 export const stock = [
 	{
-		ID: 0,
 		Tipo: 'CPU',
 		Marca: 'Intel Core',
 		Serie: 'i3',
@@ -9,7 +8,6 @@ export const stock = [
 		Precio: 160,
 	},
 	{
-		ID: 1,
 		Tipo: 'CPU',
 		Marca: 'Intel Core',
 		Serie: 'i5',
@@ -18,7 +16,6 @@ export const stock = [
 		Precio: 235,
 	},
 	{
-		ID: 2,
 		Tipo: 'CPU',
 		Marca: 'Intel Core',
 		Serie: 'i7',
@@ -27,7 +24,6 @@ export const stock = [
 		Precio: 320,
 	},
 	{
-		ID: 3,
 		Tipo: 'CPU',
 		Marca: 'Intel Core',
 		Serie: 'i9',
@@ -36,7 +32,6 @@ export const stock = [
 		Precio: 420,
 	},
 	{
-		ID: 4,
 		Tipo: 'CPU',
 		Marca: 'AMD Ryzen',
 		Serie: '3',
@@ -45,7 +40,6 @@ export const stock = [
 		Precio: 200,
 	},
 	{
-		ID: 5,
 		Tipo: 'CPU',
 		Marca: 'AMD Ryzen',
 		Serie: '5',
@@ -54,7 +48,6 @@ export const stock = [
 		Precio: 300,
 	},
 	{
-		ID: 6,
 		Tipo: 'CPU',
 		Marca: 'AMD Ryzen',
 		Serie: '7',
@@ -63,7 +56,6 @@ export const stock = [
 		Precio: 400,
 	},
 	{
-		ID: 7,
 		Tipo: 'CPU',
 		Marca: 'AMD Ryzen',
 		Serie: '9',
@@ -72,7 +64,6 @@ export const stock = [
 		Precio: 560,
 	},
 	{
-		ID: 8,
 		Tipo: 'Motherboard',
 		Marca: 'Asus',
 		Serie: 'B85',
@@ -81,7 +72,6 @@ export const stock = [
 		Precio: 80,
 	},
 	{
-		ID: 9,
 		Tipo: 'Motherboard',
 		Marca: 'Gigabyte',
 		Serie: 'Z370',
@@ -90,7 +80,6 @@ export const stock = [
 		Precio: 130,
 	},
 	{
-		ID: 10,
 		Tipo: 'Motherboard',
 		Marca: 'Gigabyte',
 		Serie: 'Z590',
@@ -99,7 +88,6 @@ export const stock = [
 		Precio: 240,
 	},
 	{
-		ID: 11,
 		Tipo: 'Motherboard',
 		Marca: 'Asus',
 		Serie: 'B550',
@@ -108,7 +96,6 @@ export const stock = [
 		Precio: 195,
 	},
 	{
-		ID: 12,
 		Tipo: 'Motherboard',
 		Marca: 'Asus',
 		Serie: 'X570',
@@ -117,7 +104,6 @@ export const stock = [
 		Precio: 330,
 	},
 	{
-		ID: 13,
 		Tipo: 'Motherboard',
 		Marca: 'Gigabyte',
 		Serie: 'A570',
@@ -126,7 +112,6 @@ export const stock = [
 		Precio: 250,
 	},
 	{
-		ID: 14,
 		Tipo: 'RAM',
 		Marca: 'Kingston',
 		Serie: 'Fury',
@@ -136,7 +121,6 @@ export const stock = [
 		Precio: 80,
 	},
 	{
-		ID: 15,
 		Tipo: 'RAM',
 		Marca: 'Kingston',
 		Serie: 'Predator',

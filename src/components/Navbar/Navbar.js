@@ -1,8 +1,8 @@
 import React from 'react';
-import CartWidget from '../../components/CartWidget/CartWidget.js';
+import CartWidget from '../CartWidget/CartWidget.js';
 import './Navbar.css';
 
-export const Navbar = () => {
+export const NavBar = () => {
 	return (
 		<nav className="NavbarItems">
 			<h1 className="navbar-logo">
