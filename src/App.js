@@ -1,18 +1,15 @@
 import React from 'react';
-import './App.css';
-import { Navbar } from './components/Navbar/Navbar';
-// import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
-import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
-import { Contenedor } from './components/Contenedor/Contenedor';
+import { NavBar } from './components/Navbar/NavBar';
+import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
+// import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
 
 function App() {
 	return (
-		<div className="App">
-			<Navbar />
-			<Contenedor>
-				<ItemDetailContainer />
-			</Contenedor>
-		</div>
+		<>
+			<NavBar />
+
+			<ItemListContainer />
+		</>
 	);
 }
 
