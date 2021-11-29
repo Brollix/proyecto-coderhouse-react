@@ -4,16 +4,24 @@ import { CircularProgress } from '@mui/material';
 import { Box } from '@mui/system';
 import './ItemListContainer.css';
 import { ItemList } from '../ItemList/ItemList';
+import { useParams } from 'react-router';
 
 export const ItemListContainer = () => {
 	const [loading, setLoading] = useState(false);
 	const [productos, setProductos] = useState([]);
 
+	const { typeID } = useParams();
+	console.log(typeID);
+
 	useEffect(() => {
 		setLoading(true);
 		fetchData()
 			.then((resp) => {
-				setProductos(resp);
+				if (!typeID) {
+					setProductos(resp);
+				} else {
+					setProductos(resp.filter((prod) => prod.Tipo === typeID));
+				}
 			})
 			.catch((error) => {
 				console.log(error);
@@ -21,7 +29,7 @@ export const ItemListContainer = () => {
 			.finally(() => {
 				setLoading(false);
 			});
-	}, [productos]);
+	}, [typeID]);
 
 	for (let i = 0; i < productos.length; i++) {
 		productos[i].id = i;
@@ -32,6 +40,8 @@ export const ItemListContainer = () => {
 			sx={{
 				display: 'flex',
 				padding: '1rem',
+				right: '50%',
+				top: '10%',
 			}}
 		>
 			<CircularProgress />
