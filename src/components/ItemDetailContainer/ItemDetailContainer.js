@@ -10,8 +10,6 @@ export const ItemDetailContainer = () => {
 
 	const { itemID } = useParams();
 
-	console.log(itemID);
-
 	useEffect(() => {
 		setLoading(true);
 
@@ -23,7 +21,6 @@ export const ItemDetailContainer = () => {
 				setLoading(false);
 			});
 	}, [itemID]);
-	console.log(item);
 
 	return <>{loading ? <CircularProgress /> : <ItemDetail {...item} />}</>;
 };

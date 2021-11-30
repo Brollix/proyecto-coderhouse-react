@@ -4,6 +4,6 @@ export const fetchData = () => {
 	return new Promise((res) => {
 		setTimeout(() => {
 			return res(stock);
-		}, 500);
+		}, 1000);
 	});
 };

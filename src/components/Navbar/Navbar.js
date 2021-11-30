@@ -1,25 +1,29 @@
+import { Box } from '@mui/system';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { CartView } from '../CartView/CartView';
+import DesktopWindowsIcon from '@mui/icons-material/DesktopWindows';
 import './Navbar.css';
+import { AppBar, Toolbar, IconButton } from '@mui/material';
 
 export const NavBar = () => {
 	return (
-		<nav className="NavbarItems">
-			<Link to="/">
-				<h1 className="navbar-logo">
-					<i className="fa-2x fab fa-ethereum" />
-					Monte Crypto
-				</h1>
-			</Link>
+		<Box sx={{ flexGrow: 1 }}>
+			<AppBar position="static">
+				<Toolbar>
+					<Link to="/" style={{ textDecoration: 'none' }}>
+						<DesktopWindowsIcon />
+						Monte Crypto
+					</Link>
 
-			<Link to="cart">
-				<CartView />
-			</Link>
-
-			<div className="menu-icon">
-				<i className="fas fa-bars" />
-			</div>
-		</nav>
+					<Link
+						to="cart"
+						style={{ margin: 'auto', textDecoration: 'none' }}
+					>
+						<CartView />
+					</Link>
+				</Toolbar>
+			</AppBar>
+		</Box>
 	);
 };

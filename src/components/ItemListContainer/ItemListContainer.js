@@ -37,7 +37,7 @@ export const ItemListContainer = () => {
 				display: 'flex',
 				padding: '1rem',
 				right: '50%',
-				top: '10%',
+				top: '25%',
 			}}
 		>
 			<CircularProgress />
