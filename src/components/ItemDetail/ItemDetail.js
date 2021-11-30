@@ -1,4 +1,4 @@
-import { Button, Card, CardMedia, Typography } from '@mui/material';
+import { Button, Card, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import React from 'react';
 import { ItemCount } from '../ItemCount/ItemCount';
