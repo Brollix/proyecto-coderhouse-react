@@ -1,16 +1,21 @@
 import React from 'react';
-import CartWidget from '../CartWidget/CartWidget.js';
+import { Link } from 'react-router-dom';
+import { CartWidget } from '../CartWidget/CartWidget';
 import './Navbar.css';
 
 export const NavBar = () => {
 	return (
 		<nav className="NavbarItems">
-			<h1 className="navbar-logo">
-				<i className="fa-2x fab fa-ethereum" />
-				Monte Crypto
-			</h1>
+			<Link to="/">
+				<h1 className="navbar-logo">
+					<i className="fa-2x fab fa-ethereum" />
+					Monte Crypto
+				</h1>
+			</Link>
 
-			<CartWidget />
+			<Link to="cart">
+				<CartWidget />
+			</Link>
 
 			<div className="menu-icon">
 				<i className="fas fa-bars" />

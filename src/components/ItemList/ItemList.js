@@ -53,12 +53,7 @@ export const ItemList = ({ productos }) => {
 								USD${prod.Precio}
 							</Typography>
 
-							<ButtonGroup color="primary" aria-label="">
-								<Button variant="contained" color="primary">
-									Agregar
-								</Button>
-								<Button color="info">Ver Mas</Button>
-							</ButtonGroup>
+							<Button color="info">Ver Mas</Button>
 						</Card>
 					);
 				})}
