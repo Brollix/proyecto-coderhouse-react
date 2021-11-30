@@ -31,10 +31,6 @@ export const ItemListContainer = () => {
 			});
 	}, [typeID]);
 
-	for (let i = 0; i < productos.length; i++) {
-		productos[i].id = i;
-	}
-
 	return loading ? (
 		<Box
 			sx={{

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { CartWidget } from '../CartWidget/CartWidget';
+import { CartView } from '../CartView/CartView';
 import './Navbar.css';
 
 export const NavBar = () => {
@@ -14,7 +14,7 @@ export const NavBar = () => {
 			</Link>
 
 			<Link to="cart">
-				<CartWidget />
+				<CartView />
 			</Link>
 
 			<div className="menu-icon">
