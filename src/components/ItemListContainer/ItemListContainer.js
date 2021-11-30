@@ -20,7 +20,7 @@ export const ItemListContainer = () => {
 				if (!typeID) {
 					setProductos(resp);
 				} else {
-					setProductos(resp.filter((prod) => prod.Tipo === typeID));
+					setProductos(resp.filter((prod) => prod.tipo === typeID));
 				}
 			})
 			.catch((error) => {

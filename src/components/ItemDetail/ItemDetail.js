@@ -10,6 +10,14 @@ export const ItemDetail = ({
 	imagen,
 	precio,
 }) => {
+	let socketOption;
+
+	if (tipo === 'CPU' || tipo === 'Motherboard') {
+		socketOption = socket[0];
+	} else if (tipo === 'RAM') {
+		socketOption = socket[1];
+	}
+
 	console.log(id, tipo, marca, serie, socket, socket, imagen, precio);
 	return (
 		<>
@@ -31,7 +39,7 @@ export const ItemDetail = ({
 					{tipo + ' ' + marca}
 				</Typography>
 				<Typography variant="body2">Modelo: {serie}</Typography>
-				<Typography variant="body2">Socket: {socket}</Typography>
+				<Typography variant="body2">{socketOption}</Typography>
 				<Typography variant="h5" color="initial">
 					USD${precio}
 				</Typography>
