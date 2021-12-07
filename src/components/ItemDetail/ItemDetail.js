@@ -1,7 +1,8 @@
+import React, { useContext } from 'react';
 import { Button, Card, Typography } from '@mui/material';
 import { Box } from '@mui/system';
-import React from 'react';
 import { ItemCount } from '../ItemCount/ItemCount';
+import { CartContext } from '../../context/CartContext';
 
 export const ItemDetail = ({
 	id,
@@ -12,6 +13,8 @@ export const ItemDetail = ({
 	imagen,
 	precio,
 }) => {
+	const { addToCart } = useContext(CartContext);
+
 	let socketOption;
 	let ref;
 
@@ -22,6 +25,17 @@ export const ItemDetail = ({
 		socketOption = socket[1];
 		ref = 'Memoria: ';
 	}
+
+	const handleAddToCart = () => {
+		addToCart({
+			id,
+			tipo,
+			marca,
+			serie,
+			socket,
+			precio,
+		});
+	};
 
 	return (
 		<Box>
@@ -56,6 +70,7 @@ export const ItemDetail = ({
 					sx={{ margin: '1rem' }}
 					variant="contained"
 					color="success"
+					onClick={handleAddToCart}
 				>
 					Agregar al Carrito
 				</Button>

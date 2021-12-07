@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { fetchData } from '../../helpers/fetchData';
+import { ItemList } from '../ItemList/ItemList';
+import { useParams } from 'react-router';
 import { CircularProgress } from '@mui/material';
 import { Box } from '@mui/system';
 import './ItemListContainer.css';
-import { ItemList } from '../ItemList/ItemList';
-import { useParams } from 'react-router';
 
 export const ItemListContainer = () => {
 	const [loading, setLoading] = useState(false);
