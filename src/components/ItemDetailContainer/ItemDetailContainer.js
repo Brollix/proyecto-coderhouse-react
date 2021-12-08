@@ -1,7 +1,8 @@
 import { CircularProgress } from '@mui/material';
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router';
-import { fetchData } from '../../helpers/fetchData';
+import { getDoc, doc } from 'firebase/firestore/lite';
+import { db } from '../../firebase/config';
 import { ItemDetail } from '../ItemDetail/ItemDetail';
 
 export const ItemDetailContainer = () => {
@@ -13,9 +14,13 @@ export const ItemDetailContainer = () => {
 	useEffect(() => {
 		setLoading(true);
 
-		fetchData()
-			.then((resp) => {
-				setItem(resp.find((prod) => prod.id === Number(itemID)));
+		const docRef = doc(db, 'productos', itemID);
+		getDoc(docRef)
+			.then((doc) => {
+				setItem({
+					id: doc.id,
+					...doc.data(),
+				});
 			})
 			.finally(() => {
 				setLoading(false);
