@@ -1,5 +1,19 @@
-import React from 'react';
+import { Paper, Typography, Button } from '@mui/material';
+import React, { useContext } from 'react';
+import { CartContext } from '../../context/CartContext';
+import './CartView.css';
 
 export const CartView = () => {
-	return <h1>CartView</h1>;
+	const { cart, emptyCart } = useContext(CartContext);
+
+	return (
+		<Paper>
+			{cart.map((prod) => {
+				return <Typography>{prod.serie}</Typography>;
+			})}
+			<Button variant="text" color="error" onClick={emptyCart}>
+				Vaciar Carrito
+			</Button>
+		</Paper>
+	);
 };

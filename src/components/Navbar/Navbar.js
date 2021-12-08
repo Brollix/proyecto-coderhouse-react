@@ -1,10 +1,10 @@
-import { Box } from '@mui/system';
 import React from 'react';
+import { Box } from '@mui/system';
 import { Link } from 'react-router-dom';
 import DesktopWindowsIcon from '@mui/icons-material/DesktopWindows';
-import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import './Navbar.css';
 import { AppBar, Toolbar } from '@mui/material';
+import { CartWidget } from '../CartWidget/CartWidget';
 
 export const NavBar = () => {
 	return (
@@ -16,13 +16,8 @@ export const NavBar = () => {
 						Monte Crypto
 					</Link>
 
-					<Link to="cart" style={{ margin: 'auto' }}>
-						<AddShoppingCartIcon
-							style={{
-								margin: 'auto',
-								fontSize: '36px',
-							}}
-						/>
+					<Link to="/cart" style={{ margin: 'auto' }}>
+						<CartWidget />
 					</Link>
 				</Toolbar>
 			</AppBar>

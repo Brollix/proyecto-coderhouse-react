@@ -1,8 +1,9 @@
-import React, { useContext } from 'react';
-import { Button, Card, Typography } from '@mui/material';
+import React, { useContext, useState } from 'react';
+import { Button, Card, Typography, ButtonGroup } from '@mui/material';
 import { Box } from '@mui/system';
 import { ItemCount } from '../ItemCount/ItemCount';
 import { CartContext } from '../../context/CartContext';
+import { Link } from 'react-router-dom';
 
 export const ItemDetail = ({
 	id,
@@ -13,7 +14,7 @@ export const ItemDetail = ({
 	imagen,
 	precio,
 }) => {
-	const { addToCart } = useContext(CartContext);
+	const { addToCart, isInCart } = useContext(CartContext);
 
 	let socketOption;
 	let ref;
@@ -26,15 +27,21 @@ export const ItemDetail = ({
 		ref = 'Memoria: ';
 	}
 
+	const [cantidad, setCantidad] = useState(0);
+
 	const handleAddToCart = () => {
-		addToCart({
-			id,
-			tipo,
-			marca,
-			serie,
-			socket,
-			precio,
-		});
+		console.log(cantidad);
+		if (cantidad > 0) {
+			addToCart({
+				id,
+				tipo,
+				marca,
+				serie,
+				socket,
+				precio,
+				cantidad,
+			});
+		}
 	};
 
 	return (
@@ -46,13 +53,6 @@ export const ItemDetail = ({
 					maxHeight: '650px',
 				}}
 			>
-				{/* <CardMedia
-					component="img"
-					width="250px"
-					height="250px"
-					image={require(`../../data/img/${imagen}`).default}
-					alt={imagen}
-				/> */}
 				<Typography variant="h5" color="initial">
 					{tipo + ' ' + marca + ' ' + serie}
 				</Typography>
@@ -64,16 +64,38 @@ export const ItemDetail = ({
 					USD${precio}
 				</Typography>
 
-				<ItemCount precio={precio} />
-
-				<Button
-					sx={{ margin: '1rem' }}
-					variant="contained"
-					color="success"
-					onClick={handleAddToCart}
-				>
-					Agregar al Carrito
-				</Button>
+				{!isInCart(id) ? (
+					<>
+						<ItemCount
+							precio={precio}
+							cantidad={cantidad}
+							setCantidad={setCantidad}
+						/>
+						<Button
+							sx={{ margin: '1rem' }}
+							variant="contained"
+							color="success"
+							onClick={handleAddToCart}
+						>
+							Agregar al Carrito
+						</Button>
+					</>
+				) : (
+					<>
+						<ButtonGroup
+							variant="text"
+							color="primary"
+							aria-label=""
+						>
+							<Button variant="contained" color="primary">
+								<Link to="/"> Volver al Inicio </Link>
+							</Button>
+							<Button variant="text" color="success">
+								<Link to="/cart">Terminar mi Compra</Link>
+							</Button>
+						</ButtonGroup>
+					</>
+				)}
 			</Card>
 		</Box>
 	);

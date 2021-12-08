@@ -1,13 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './ItemCount.css';
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import Typography from '@mui/material/Typography';
 import { Paper } from '@mui/material';
 
-export const ItemCount = ({ precio }) => {
-	const [cantidad, setCantidad] = useState(0);
-
+export const ItemCount = ({ precio, cantidad, setCantidad }) => {
 	const handleClickAdd = () => {
 		setCantidad(cantidad + 1);
 	};
