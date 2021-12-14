@@ -96,6 +96,7 @@ export const Checkout = () => {
 		if (outOfStock.length === 0) {
 			addDoc(orderRef, orden).then((res) => {
 				batch.commit();
+				console.log(cart);
 
 				return (
 					<div>
