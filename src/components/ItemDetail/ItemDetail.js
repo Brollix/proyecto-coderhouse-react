@@ -1,5 +1,11 @@
 import React, { useContext, useState } from 'react';
-import { Button, Card, Typography, ButtonGroup } from '@mui/material';
+import {
+	Button,
+	Card,
+	Typography,
+	ButtonGroup,
+	CardMedia,
+} from '@mui/material';
 import { Box } from '@mui/system';
 import { ItemCount } from '../ItemCount/ItemCount';
 import { CartContext } from '../../context/CartContext';
@@ -38,6 +44,7 @@ export const ItemDetail = ({
 				marca,
 				serie,
 				socket,
+				imagen,
 				precio,
 				cantidad,
 			});
@@ -53,6 +60,7 @@ export const ItemDetail = ({
 					maxHeight: '650px',
 				}}
 			>
+				<CardMedia component="img" title={imagen} image={imagen} />
 				<Typography variant="h5" color="initial">
 					{tipo + ' ' + marca + ' ' + serie}
 				</Typography>

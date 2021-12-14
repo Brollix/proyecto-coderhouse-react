@@ -16,7 +16,7 @@ export const Item = ({ id, tipo, marca, serie, socket, imagen, precio }) => {
 					component="img"
 					width="250px"
 					height="250px"
-					image={require(`../../data/img/${imagen}`).default}
+					image={imagen}
 					alt={imagen}
 				/>
 				<Typography variant="body1" color="initial">
