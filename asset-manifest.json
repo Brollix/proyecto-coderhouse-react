@@ -1,36 +1,22 @@
 {
   "files": {
-    "main.css": "/proyecto-coderhouse-react/static/css/main.09bf1848.chunk.css",
-    "main.js": "/proyecto-coderhouse-react/static/js/main.81b9790c.chunk.js",
-    "main.js.map": "/proyecto-coderhouse-react/static/js/main.81b9790c.chunk.js.map",
-    "runtime-main.js": "/proyecto-coderhouse-react/static/js/runtime-main.239b0d15.js",
-    "runtime-main.js.map": "/proyecto-coderhouse-react/static/js/runtime-main.239b0d15.js.map",
-    "static/js/2.d059a879.chunk.js": "/proyecto-coderhouse-react/static/js/2.d059a879.chunk.js",
-    "static/js/2.d059a879.chunk.js.map": "/proyecto-coderhouse-react/static/js/2.d059a879.chunk.js.map",
+    "main.css": "/proyecto-coderhouse-react/static/css/main.2b3f28e0.chunk.css",
+    "main.js": "/proyecto-coderhouse-react/static/js/main.797b7200.chunk.js",
+    "main.js.map": "/proyecto-coderhouse-react/static/js/main.797b7200.chunk.js.map",
+    "runtime-main.js": "/proyecto-coderhouse-react/static/js/runtime-main.4bc8b79c.js",
+    "runtime-main.js.map": "/proyecto-coderhouse-react/static/js/runtime-main.4bc8b79c.js.map",
+    "static/js/2.c432d170.chunk.js": "/proyecto-coderhouse-react/static/js/2.c432d170.chunk.js",
+    "static/js/2.c432d170.chunk.js.map": "/proyecto-coderhouse-react/static/js/2.c432d170.chunk.js.map",
     "index.html": "/proyecto-coderhouse-react/index.html",
-    "static/css/main.09bf1848.chunk.css.map": "/proyecto-coderhouse-react/static/css/main.09bf1848.chunk.css.map",
-    "static/js/2.d059a879.chunk.js.LICENSE.txt": "/proyecto-coderhouse-react/static/js/2.d059a879.chunk.js.LICENSE.txt",
-    "static/media/A570.png": "/proyecto-coderhouse-react/static/media/A570.15ab1306.png",
-    "static/media/B550.png": "/proyecto-coderhouse-react/static/media/B550.83ae26a9.png",
-    "static/media/B85.png": "/proyecto-coderhouse-react/static/media/B85.c2e6ee06.png",
-    "static/media/Fury.png": "/proyecto-coderhouse-react/static/media/Fury.42c4ff1f.png",
-    "static/media/Predator.png": "/proyecto-coderhouse-react/static/media/Predator.759562ac.png",
-    "static/media/X570.png": "/proyecto-coderhouse-react/static/media/X570.60c8be41.png",
-    "static/media/Z370.png": "/proyecto-coderhouse-react/static/media/Z370.a6b2af91.png",
-    "static/media/Z590.png": "/proyecto-coderhouse-react/static/media/Z590.585a07b2.png",
-    "static/media/i3.png": "/proyecto-coderhouse-react/static/media/i3.8746d11a.png",
-    "static/media/i5.png": "/proyecto-coderhouse-react/static/media/i5.562c9c1c.png",
-    "static/media/i7.png": "/proyecto-coderhouse-react/static/media/i7.e873b047.png",
-    "static/media/i9.png": "/proyecto-coderhouse-react/static/media/i9.a7d27493.png",
-    "static/media/r3.png": "/proyecto-coderhouse-react/static/media/r3.746c3d9e.png",
-    "static/media/r5.png": "/proyecto-coderhouse-react/static/media/r5.0443796c.png",
-    "static/media/r7.png": "/proyecto-coderhouse-react/static/media/r7.6c3004ef.png",
-    "static/media/r9.png": "/proyecto-coderhouse-react/static/media/r9.acee6f16.png"
+    "precache-manifest.138e6d1a1beef5af6c56d794b884fe6b.js": "/proyecto-coderhouse-react/precache-manifest.138e6d1a1beef5af6c56d794b884fe6b.js",
+    "service-worker.js": "/proyecto-coderhouse-react/service-worker.js",
+    "static/css/main.2b3f28e0.chunk.css.map": "/proyecto-coderhouse-react/static/css/main.2b3f28e0.chunk.css.map",
+    "static/js/2.c432d170.chunk.js.LICENSE.txt": "/proyecto-coderhouse-react/static/js/2.c432d170.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.239b0d15.js",
-    "static/js/2.d059a879.chunk.js",
-    "static/css/main.09bf1848.chunk.css",
-    "static/js/main.81b9790c.chunk.js"
+    "static/js/runtime-main.4bc8b79c.js",
+    "static/js/2.c432d170.chunk.js",
+    "static/css/main.2b3f28e0.chunk.css",
+    "static/js/main.797b7200.chunk.js"
   ]
 }
