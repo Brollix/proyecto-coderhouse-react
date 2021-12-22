@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f95794ab2f003ac64a296cb44d7bcbd4",
+    "revision": "f60b6fb683e2d3d9139df9275a74b513",
     "url": "/proyecto-coderhouse-react/index.html"
   },
   {
-    "revision": "0a11bc0b76cd949fb429",
+    "revision": "add49a27d044979954af",
     "url": "/proyecto-coderhouse-react/static/css/main.2b3f28e0.chunk.css"
   },
   {
-    "revision": "6917e04e62bf4e5f3914",
-    "url": "/proyecto-coderhouse-react/static/js/2.c432d170.chunk.js"
+    "revision": "8fae23060ef233075d57",
+    "url": "/proyecto-coderhouse-react/static/js/2.a0a1f14a.chunk.js"
   },
   {
     "revision": "428b38507086d485d87e5cbd762b7c59",
-    "url": "/proyecto-coderhouse-react/static/js/2.c432d170.chunk.js.LICENSE.txt"
+    "url": "/proyecto-coderhouse-react/static/js/2.a0a1f14a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0a11bc0b76cd949fb429",
-    "url": "/proyecto-coderhouse-react/static/js/main.797b7200.chunk.js"
+    "revision": "add49a27d044979954af",
+    "url": "/proyecto-coderhouse-react/static/js/main.743bfac1.chunk.js"
   },
   {
     "revision": "9cf5c8f4b9964b2d4603",

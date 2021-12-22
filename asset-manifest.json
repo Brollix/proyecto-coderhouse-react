@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/proyecto-coderhouse-react/static/css/main.2b3f28e0.chunk.css",
-    "main.js": "/proyecto-coderhouse-react/static/js/main.797b7200.chunk.js",
-    "main.js.map": "/proyecto-coderhouse-react/static/js/main.797b7200.chunk.js.map",
+    "main.js": "/proyecto-coderhouse-react/static/js/main.743bfac1.chunk.js",
+    "main.js.map": "/proyecto-coderhouse-react/static/js/main.743bfac1.chunk.js.map",
     "runtime-main.js": "/proyecto-coderhouse-react/static/js/runtime-main.4bc8b79c.js",
     "runtime-main.js.map": "/proyecto-coderhouse-react/static/js/runtime-main.4bc8b79c.js.map",
-    "static/js/2.c432d170.chunk.js": "/proyecto-coderhouse-react/static/js/2.c432d170.chunk.js",
-    "static/js/2.c432d170.chunk.js.map": "/proyecto-coderhouse-react/static/js/2.c432d170.chunk.js.map",
+    "static/js/2.a0a1f14a.chunk.js": "/proyecto-coderhouse-react/static/js/2.a0a1f14a.chunk.js",
+    "static/js/2.a0a1f14a.chunk.js.map": "/proyecto-coderhouse-react/static/js/2.a0a1f14a.chunk.js.map",
     "index.html": "/proyecto-coderhouse-react/index.html",
-    "precache-manifest.138e6d1a1beef5af6c56d794b884fe6b.js": "/proyecto-coderhouse-react/precache-manifest.138e6d1a1beef5af6c56d794b884fe6b.js",
+    "precache-manifest.4d7d98bab935d58aad8505da60357740.js": "/proyecto-coderhouse-react/precache-manifest.4d7d98bab935d58aad8505da60357740.js",
     "service-worker.js": "/proyecto-coderhouse-react/service-worker.js",
     "static/css/main.2b3f28e0.chunk.css.map": "/proyecto-coderhouse-react/static/css/main.2b3f28e0.chunk.css.map",
-    "static/js/2.c432d170.chunk.js.LICENSE.txt": "/proyecto-coderhouse-react/static/js/2.c432d170.chunk.js.LICENSE.txt"
+    "static/js/2.a0a1f14a.chunk.js.LICENSE.txt": "/proyecto-coderhouse-react/static/js/2.a0a1f14a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.4bc8b79c.js",
-    "static/js/2.c432d170.chunk.js",
+    "static/js/2.a0a1f14a.chunk.js",
     "static/css/main.2b3f28e0.chunk.css",
-    "static/js/main.797b7200.chunk.js"
+    "static/js/main.743bfac1.chunk.js"
   ]
 }
