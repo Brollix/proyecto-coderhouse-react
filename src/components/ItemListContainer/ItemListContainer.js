@@ -26,26 +26,10 @@ export const ItemListContainer = () => {
 				}));
 
 				setProductos(items);
-				/* if (!typeID) {
-					setProductos(resp);
-				} else {
-					setProductos(resp.filter((prod) => prod.tipo === typeID));
-				} */
 			})
 			.finally(() => {
 				setLoading(false);
 			});
-
-		/* fetchData()
-			.then((resp) => {
-				
-			})
-			.catch((error) => {
-				console.log(error);
-			})
-			.finally(() => {
-				setLoading(false);
-			}); */
 	}, [typeID]);
 
 	return loading ? (

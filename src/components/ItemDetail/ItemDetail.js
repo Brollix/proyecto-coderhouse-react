@@ -36,7 +36,6 @@ export const ItemDetail = ({
 	const [cantidad, setCantidad] = useState(0);
 
 	const handleAddToCart = () => {
-		console.log(cantidad);
 		if (cantidad > 0) {
 			addToCart({
 				id,

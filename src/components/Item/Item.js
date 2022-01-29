@@ -2,7 +2,21 @@ import { Button, Card, CardMedia, Typography } from '@mui/material';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export const Item = ({ id, tipo, marca, serie, socket, imagen, precio }) => {
+export const Item = ({
+	id,
+	tipo,
+	marca,
+	serie,
+	socket,
+	imagen,
+	precio,
+	stock,
+}) => {
+	let socketRef;
+	if (tipo !== 'RAM') {
+		socketRef = socket[0];
+	} else socketRef = socket[1];
+
 	return (
 		<>
 			<Card
@@ -23,9 +37,10 @@ export const Item = ({ id, tipo, marca, serie, socket, imagen, precio }) => {
 					{tipo + ' ' + marca}
 				</Typography>
 				<Typography variant="body2">Modelo: {serie}</Typography>
-				<Typography variant="body2">Socket: {socket}</Typography>
-				<Typography variant="h5" color="initial">
-					USD${precio}
+				<Typography variant="body2">Socket: {socketRef}</Typography>
+				<Typography variant="h5">USD${precio}</Typography>
+				<Typography variant="h6" color="initial">
+					Stock: {stock}
 				</Typography>
 
 				<Button variant="contained" color="primary">
