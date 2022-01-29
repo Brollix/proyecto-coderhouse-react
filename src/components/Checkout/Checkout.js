@@ -18,6 +18,8 @@ import { BasicModal } from './Modal.js'
 export const Checkout = ({ handleOpen }) => {
 	const { cart, totalCompra } = useContext(CartContext)
 
+	const [open, setOpen] = React.useState(false)
+
 	const [values, setValues] = useState({
 		nombre: '',
 		email: '',
@@ -73,11 +75,7 @@ export const Checkout = ({ handleOpen }) => {
 		if (outOfStock.length === 0) {
 			addDoc(orderRef, orden).then((res) => {
 				batch.commit()
-				return (
-					<>
-						<BasicModal handleOpen={handleOpen} />
-					</>
-				)
+				setOpen(true)
 			})
 		} else {
 			console.log(outOfStock)
@@ -93,6 +91,11 @@ export const Checkout = ({ handleOpen }) => {
 					</Typography>
 					<Typography variant="body1" color="initial"></Typography>
 
+					<BasicModal
+						isOpen={open}
+						cart={cart}
+						handleClose={() => setOpen(false)}
+					/>
 					<form onSubmit={handleSubmit}>
 						<TextField
 							onChange={handleInputChange}
@@ -102,7 +105,6 @@ export const Checkout = ({ handleOpen }) => {
 							label="Nombre"
 							required
 						/>
-						x
 						<TextField
 							onChange={handleInputChange}
 							name="email"
@@ -131,11 +133,7 @@ export const Checkout = ({ handleOpen }) => {
 						</Button>
 					</form>
 				</Paper>
-			) : (
-				<Button variant="outlined" color="primary">
-					<Link to="/cart">Volver a Inicio</Link>
-				</Button>
-			)}
+			) : null}
 		</>
 	)
 }
