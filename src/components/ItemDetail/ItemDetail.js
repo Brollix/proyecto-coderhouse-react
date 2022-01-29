@@ -1,15 +1,9 @@
-import React, { useContext, useState } from 'react';
-import {
-	Button,
-	Card,
-	Typography,
-	ButtonGroup,
-	CardMedia,
-} from '@mui/material';
-import { Box } from '@mui/system';
-import { ItemCount } from '../ItemCount/ItemCount';
-import { CartContext } from '../../context/CartContext';
-import { Link } from 'react-router-dom';
+import React, { useContext, useState } from 'react'
+import { Button, Card, Typography, ButtonGroup, CardMedia } from '@mui/material'
+import { Box } from '@mui/system'
+import { ItemCount } from '../ItemCount/ItemCount'
+import { CartContext } from '../../context/CartContext'
+import { Link } from 'react-router-dom'
 
 export const ItemDetail = ({
 	id,
@@ -20,20 +14,20 @@ export const ItemDetail = ({
 	imagen,
 	precio,
 }) => {
-	const { addToCart, isInCart } = useContext(CartContext);
+	const { addToCart, isInCart } = useContext(CartContext)
 
-	let socketOption;
-	let ref;
+	let socketOption
+	let ref
 
 	if (tipo === 'CPU' || tipo === 'Motherboard') {
-		socketOption = socket[0];
-		ref = 'Socket: ';
+		socketOption = socket[0]
+		ref = 'Socket: '
 	} else if (tipo === 'RAM') {
-		socketOption = socket[1];
-		ref = 'Memoria: ';
+		socketOption = socket[1]
+		ref = 'Memoria: '
 	}
 
-	const [cantidad, setCantidad] = useState(0);
+	const [cantidad, setCantidad] = useState(0)
 
 	const handleAddToCart = () => {
 		if (cantidad > 0) {
@@ -46,9 +40,9 @@ export const ItemDetail = ({
 				imagen,
 				precio,
 				cantidad,
-			});
+			})
 		}
-	};
+	}
 
 	return (
 		<Box>
@@ -105,5 +99,5 @@ export const ItemDetail = ({
 				)}
 			</Card>
 		</Box>
-	);
-};
+	)
+}
