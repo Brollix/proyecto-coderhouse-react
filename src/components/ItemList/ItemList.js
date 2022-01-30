@@ -1,6 +1,7 @@
-import React from 'react';
-import { Grid, Typography } from '@mui/material';
-import { Item } from '../Item/Item';
+import React from 'react'
+import { Grid, Typography } from '@mui/material'
+import { Item } from '../Item/Item'
+import './ItemList.css'
 
 export const ItemList = ({ productos }) => {
 	return (
@@ -9,11 +10,11 @@ export const ItemList = ({ productos }) => {
 				Productos: CPU, Motherboard y RAM
 			</Typography>
 
-			<Grid container>
+			<Grid className="container" container>
 				{productos.map((prod) => (
 					<Item key={prod.id} {...prod} />
 				))}
 			</Grid>
 		</>
-	);
-};
+	)
+}
