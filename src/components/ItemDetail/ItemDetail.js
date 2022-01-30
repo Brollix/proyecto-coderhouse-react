@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react'
-import { Button, Card, Typography, ButtonGroup, CardMedia } from '@mui/material'
+import { Button, Card, Typography, CardMedia } from '@mui/material'
 import { Box } from '@mui/system'
 import { ItemCount } from '../ItemCount/ItemCount'
 import { CartContext } from '../../context/CartContext'
@@ -13,8 +13,9 @@ export const ItemDetail = ({
 	socket,
 	imagen,
 	precio,
+	stock,
 }) => {
-	const { addToCart, isInCart } = useContext(CartContext)
+	const { addToCart } = useContext(CartContext)
 
 	let socketOption
 	let ref
@@ -30,7 +31,7 @@ export const ItemDetail = ({
 	const [cantidad, setCantidad] = useState(0)
 
 	const handleAddToCart = () => {
-		if (cantidad > 0) {
+		if (cantidad < stock && cantidad > 0) {
 			addToCart({
 				id,
 				tipo,
@@ -40,6 +41,7 @@ export const ItemDetail = ({
 				imagen,
 				precio,
 				cantidad,
+				stock,
 			})
 		}
 	}
@@ -64,39 +66,26 @@ export const ItemDetail = ({
 				<Typography variant="h5" color="initial">
 					USD${precio}
 				</Typography>
+				<ItemCount
+					precio={precio}
+					cantidad={cantidad}
+					setCantidad={setCantidad}
+				/>
 
-				{!isInCart(id) ? (
-					<>
-						<ItemCount
-							precio={precio}
-							cantidad={cantidad}
-							setCantidad={setCantidad}
-						/>
-						<Button
-							sx={{ margin: '1rem' }}
-							variant="contained"
-							color="success"
-							onClick={handleAddToCart}
-						>
-							Agregar al Carrito
-						</Button>
-					</>
-				) : (
-					<>
-						<ButtonGroup
-							variant="text"
-							color="primary"
-							aria-label=""
-						>
-							<Button variant="contained" color="primary">
-								<Link to="/"> Volver al Inicio </Link>
-							</Button>
-							<Button variant="text" color="success">
-								<Link to="/cart">Terminar mi Compra</Link>
-							</Button>
-						</ButtonGroup>
-					</>
-				)}
+				<Link to="/cart">
+					<Button
+						sx={{
+							margin: '1rem',
+							textDecoration: 'none',
+						}}
+						type="text"
+						variant="contained"
+						color="success"
+						onClick={handleAddToCart}
+					>
+						Agregar al Carrito
+					</Button>
+				</Link>
 			</Card>
 		</Box>
 	)

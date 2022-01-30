@@ -11,7 +11,7 @@ import {
 	documentId,
 } from 'firebase/firestore/lite'
 import { db } from '../../firebase/config'
-import { Typography, Paper, TextField, Button, Link } from '@mui/material'
+import { Typography, Paper, TextField, Button } from '@mui/material'
 
 import { BasicModal } from './Modal.js'
 

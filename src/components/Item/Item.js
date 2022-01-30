@@ -1,6 +1,6 @@
-import { Button, Card, CardMedia, Typography } from '@mui/material';
-import React from 'react';
-import { Link } from 'react-router-dom';
+import { Button, Card, CardMedia, Typography } from '@mui/material'
+import React from 'react'
+import { Link } from 'react-router-dom'
 
 export const Item = ({
 	id,
@@ -12,10 +12,10 @@ export const Item = ({
 	precio,
 	stock,
 }) => {
-	let socketRef;
+	let socketRef
 	if (tipo !== 'RAM') {
-		socketRef = socket[0];
-	} else socketRef = socket[1];
+		socketRef = socket[0]
+	} else socketRef = socket[1]
 
 	return (
 		<>
@@ -56,5 +56,5 @@ export const Item = ({
 				</Button>
 			</Card>
 		</>
-	);
-};
+	)
+}

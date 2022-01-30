@@ -1,16 +1,17 @@
-import * as React from 'react'
+import React, { useContext } from 'react'
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
 import Modal from '@mui/material/Modal'
 import { Link } from 'react-router-dom'
+import { CartContext } from '../../context/CartContext'
 
 const style = {
 	position: 'absolute',
 	top: '50%',
 	left: '50%',
 	transform: 'translate(-50%, -50%)',
-	width: 400,
+	maxWidth: 500,
 	color: 'black',
 	bgcolor: 'background.paper',
 	border: '2px solid #000',
@@ -19,7 +20,13 @@ const style = {
 }
 
 export function BasicModal(props) {
+	const { emptyCart } = useContext(CartContext)
 	const { isOpen, handleClose } = props
+
+	const click = () => {
+		handleClose()
+		emptyCart()
+	}
 
 	return (
 		<div>
@@ -30,20 +37,19 @@ export function BasicModal(props) {
 				aria-describedby="modal-modal-description"
 			>
 				<Box sx={style}>
-					<Typography
-						id="modal-modal-title"
-						variant="h6"
-						component="h2"
-					>
-						Text in a modal
+					<Typography id="modal-modal-title" variant="h2">
+						Su orden de compra ha sido realizada
 					</Typography>
-					<Typography>{JSON.stringify(props.cart?.[0])}</Typography>
+					<Typography>
+						{JSON.stringify(
+							props.cart.map((item) => ({ ...item }))
+						)}
+					</Typography>
 					<Typography id="modal-modal-description" sx={{ mt: 2 }}>
-						Duis mollis, est non commodo luctus, nisi erat porttitor
-						ligula.
+						En un lapso de 10 dias recibirá su producto.
 					</Typography>
 					<Link to="/">
-						<Button onClick={handleClose}>Aceptar</Button>
+						<Button onClick={click}>Aceptar</Button>
 						{/*Por alguna razon poniendo un "Link to='/'" 
 						desde el operador ternario del checkout, 
 						no funcionaba el redireccionamiento, 
