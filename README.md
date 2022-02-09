@@ -2,5 +2,4 @@
 
 ### Agustín Brollo
 
-### Proyecto Final Curso ReactJS:
-https://brollix.github.io/proyecto-coderhouse-react/
+### Proyecto Final Curso ReactJS
