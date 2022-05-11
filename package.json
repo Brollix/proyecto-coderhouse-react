@@ -45,5 +45,16 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "description": "### Agustín Brollo",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Brollix/proyecto-coderhouse-react.git"
+  },
+  "author": "Agustin Brollo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Brollix/proyecto-coderhouse-react/issues"
   }
 }
