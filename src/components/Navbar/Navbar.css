@@ -1,4 +1,4 @@
-.NavbarItems {
+.appbar {
 	background: linear-gradient(
 		135deg,
 		rgb(21, 21, 206),
@@ -6,8 +6,14 @@
 	);
 	display: flex;
 	justify-content: space-around;
+	margin: 0;
 	align-items: center;
 	padding: 1rem 1.5rem;
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
 }
 
 .fa-ethereum {
@@ -17,14 +23,19 @@
 }
 
 .navbar-logo {
+	transform: scale(1.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	color: white;
-	justify-self: start;
-	margin-left: 25px;
 	cursor: pointer;
 }
 
-.fa-shopping-cart,
-.fa-bars {
-	color: white;
-	font-size: 24px;
+.logo {
+	transform: scale(1.5);
+	padding: 15px;
+}
+
+.cart {
+	transform: scale(1.5);
 }

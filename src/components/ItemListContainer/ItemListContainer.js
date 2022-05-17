@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { ItemList } from '../ItemList/ItemList'
 import { useParams } from 'react-router'
-import { CircularProgress } from '@mui/material'
-import { Box } from '@mui/system'
-import { collection, getDocs, getDoc, doc } from 'firebase/firestore/lite'
+import { collection, getDocs } from 'firebase/firestore/lite'
 import { db } from '../../firebase/config'
 import './ItemListContainer.css'
 
@@ -40,16 +38,9 @@ export const ItemListContainer = () => {
 	}, [typeID])
 
 	return loading ? (
-		<Box
-			sx={{
-				display: 'flex',
-				padding: '1rem',
-				right: '50%',
-				top: '25%',
-			}}
-		>
-			<CircularProgress />
-		</Box>
+		<div className="icon-container">
+			<i className="fas fa-spinner fa-spin"></i>
+		</div>
 	) : (
 		<ItemList productos={productos} />
 	)

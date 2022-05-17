@@ -1,9 +1,14 @@
-.card {
-	max-width: 200px;
-	max-height: 400px;
+.icon-container {
+	display: 'flex';
+	justify-content: center;
+	align-items: center;
 }
 
-.media {
-	width: 150px;
-	height: auto;
+.fas {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 100px;
+	font-size: 100px;
+	color: rgb(119, 173, 216);
 }

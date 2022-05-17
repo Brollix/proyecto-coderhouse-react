@@ -9,61 +9,69 @@ export const CartView = () => {
 		useContext(CartContext)
 
 	return (
-		<>
-			<Card className="container">
-				{cart.map((prod) => {
-					return (
-						<Paper key={prod.id} sx={{ width: '250px' }}>
-							<Typography>Marca: {prod.marca}</Typography>
-							<Typography>Serie: {prod.serie}</Typography>
-							<Typography>Total: USD${totalCompra()}</Typography>
-							<Button
-								onClick={() => {
-									removeFromCart(prod.id)
-								}}
-								variant="text"
-								color="primary"
-							>
-								Eliminar
-							</Button>
-						</Paper>
-					)
-				})}
+		<Card className="container">
+			{cart.map((prod) => {
+				return (
+					<Paper key={prod.id}>
+						<Typography>Marca: {prod.marca}</Typography>
+						<Typography>Serie: {prod.serie}</Typography>
+						<Typography>Total: USD${totalCompra()}</Typography>
+						<Button
+							onClick={() => {
+								removeFromCart(prod.id)
+							}}
+							variant="text"
+							color="primary"
+						>
+							Eliminar
+						</Button>
+					</Paper>
+				)
+			})}
 
-				{cart.length > 0 ? (
-					<ButtonGroup
-						className="botones"
-						variant="text"
-						color="primary"
-						aria-label=""
-						sx={{ textDecoration: 'none' }}
-					>
-						<Button
-							className="botones"
-							variant="contained"
-							color="error"
-							onClick={emptyCart}
-						>
-							Vaciar Carrito
-						</Button>
-						<Button
-							className="botones"
-							variant="contained"
-							color="success"
-						>
-							<Link to="/checkout">Terminar mi Compra</Link>
-						</Button>
-					</ButtonGroup>
-				) : (
+			{cart.length > 0 ? (
+				<ButtonGroup
+					className="botones"
+					variant="text"
+					color="primary"
+					aria-label=""
+				>
 					<Button
 						className="botones"
 						variant="contained"
 						color="error"
+						onClick={emptyCart}
 					>
-						<Link to="/">Volver al Inicio</Link>
+						Vaciar Carrito
 					</Button>
-				)}
-			</Card>
-		</>
+					<Button
+						className="botones"
+						variant="contained"
+						color="success"
+					>
+						<Link
+							style={{ textDecoration: 'none', color: 'white' }}
+							to="/checkout"
+						>
+							Terminar mi Compra
+						</Link>
+					</Button>
+				</ButtonGroup>
+			) : (
+				<div>
+					<Button variant="contained" color="error">
+						<Link
+							style={{
+								textDecoration: 'none',
+								color: 'white',
+							}}
+							to="/productos"
+						>
+							Volver al Inicio
+						</Link>
+					</Button>
+				</div>
+			)}
+		</Card>
 	)
 }

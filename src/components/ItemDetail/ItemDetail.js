@@ -1,9 +1,8 @@
 import React, { useContext, useState } from 'react'
-import { Button, Card, Typography, CardMedia } from '@mui/material'
-import { Box } from '@mui/system'
 import { ItemCount } from '../ItemCount/ItemCount'
 import { CartContext } from '../../context/CartContext'
 import { Link } from 'react-router-dom'
+import './ItemDetail.css'
 
 export const ItemDetail = ({
 	id,
@@ -47,46 +46,28 @@ export const ItemDetail = ({
 	}
 
 	return (
-		<Box>
-			<Card
-				key={id}
-				sx={{
-					width: '250px',
-					maxHeight: '650px',
-				}}
-			>
-				<CardMedia component="img" title={imagen} image={imagen} />
-				<Typography variant="h5" color="initial">
-					{tipo + ' ' + marca + ' ' + serie}
-				</Typography>
-				<Typography variant="body2">
-					{ref}
-					{socketOption}
-				</Typography>
-				<Typography variant="h5" color="initial">
-					USD${precio}
-				</Typography>
-				<ItemCount
-					precio={precio}
-					cantidad={cantidad}
-					setCantidad={setCantidad}
-				/>
+		<div className="detail" key={id}>
+			<img src={imagen} alt={imagen} />
+			<h2>{tipo + ' ' + marca + ' ' + serie}</h2>
+			<p>
+				{ref}
+				{socketOption}
+			</p>
+			<h3>USD${precio}</h3>
+			<ItemCount
+				precio={precio}
+				cantidad={cantidad}
+				setCantidad={setCantidad}
+			/>
 
-				<Link to="/cart">
-					<Button
-						sx={{
-							margin: '1rem',
-							textDecoration: 'none',
-						}}
-						type="text"
-						variant="contained"
-						color="success"
-						onClick={handleAddToCart}
-					>
-						Agregar al Carrito
-					</Button>
-				</Link>
-			</Card>
-		</Box>
+			<Link to="/cart">
+				<button className="btn-add" onClick={handleAddToCart}>
+					Agregar al Carrito
+				</button>
+			</Link>
+			<Link to="/productos">
+				<button>Volver al inicio</button>
+			</Link>
+		</div>
 	)
 }

@@ -1,4 +1,15 @@
-.container {
+.cart-icon {
+	transform: scale(1.15);
 	display: flex;
+	color: white;
+	justify-content: center;
 	align-items: center;
+}
+
+.cart {
+	padding: 10px;
+}
+
+.cant {
+	padding: 10px;
 }

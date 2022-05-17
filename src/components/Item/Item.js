@@ -1,6 +1,6 @@
-import { Button, Card, CardMedia, Typography } from '@mui/material'
 import React from 'react'
 import { Link } from 'react-router-dom'
+import './item.css'
 
 export const Item = ({
 	id,
@@ -19,42 +19,16 @@ export const Item = ({
 
 	return (
 		<>
-			<Card
-				key={id}
-				sx={{
-					width: '250px',
-					maxHeight: '450px',
-				}}
-			>
-				<CardMedia
-					component="img"
-					width="250px"
-					height="250px"
-					image={imagen}
-					alt={imagen}
-				/>
-				<Typography variant="body1" color="initial">
-					{tipo + ' ' + marca}
-				</Typography>
-				<Typography variant="body2">Modelo: {serie}</Typography>
-				<Typography variant="body2">Socket: {socketRef}</Typography>
-				<Typography variant="h5">USD${precio}</Typography>
-				<Typography variant="h6" color="initial">
-					Stock: {stock}
-				</Typography>
+			<div className="card" key={id}>
+				<img className="img" src={imagen} alt={{ marca } + { serie }} />
+				<h2>{marca + ' ' + serie}</h2>
+				<p>Socket {socketRef}</p>
+				<h3>USD ${precio}</h3>
 
-				<Button variant="contained" color="primary">
-					<Link
-						to={`/detail/${id}`}
-						style={{
-							color: 'white',
-							textDecoration: 'none',
-						}}
-					>
-						Ver Más
-					</Link>
-				</Button>
-			</Card>
+				<Link to={`/detail/${id}`} className="link">
+					<button className="ver-mas">Ver Más</button>
+				</Link>
+			</div>
 		</>
 	)
 }

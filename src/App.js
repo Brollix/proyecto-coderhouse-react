@@ -10,6 +10,7 @@ function App() {
 		<CartProvider>
 			<BrowserRouter>
 				<Navbar />
+				<h2>Productos: CPU, Motherboard y RAM</h2>
 				<AppRouter />
 			</BrowserRouter>
 		</CartProvider>

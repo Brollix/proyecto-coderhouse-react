@@ -1,57 +1,33 @@
-import React from 'react';
-import './ItemCount.css';
-import Button from '@mui/material/Button';
-import ButtonGroup from '@mui/material/ButtonGroup';
-import Typography from '@mui/material/Typography';
-import { Paper } from '@mui/material';
+import React from 'react'
+import './ItemCount.css'
 
 export const ItemCount = ({ precio, cantidad, setCantidad }) => {
 	const handleClickAdd = () => {
-		setCantidad(cantidad + 1);
-	};
+		setCantidad(cantidad + 1)
+	}
 
 	const handleClickRemove = () => {
 		if (cantidad > 0) {
-			setCantidad(cantidad - 1);
+			setCantidad(cantidad - 1)
 		}
-	};
+	}
 
 	const handleClickEmpty = () => {
 		if (cantidad > 0) {
-			setCantidad(cantidad - cantidad);
+			setCantidad(cantidad - cantidad)
 		}
-	};
+	}
 
 	return (
-		<Paper>
-			<Typography variant="h6">Cantidad: {cantidad}</Typography>
-			<Typography variant="body1">
-				Subtotal USD$ {cantidad * precio}
-			</Typography>
+		<div>
+			<p>Cantidad: {cantidad}</p>
+			<p>Subtotal USD$ {cantidad * precio}</p>
 
-			<ButtonGroup sx={{ margin: '1rem' }}>
-				<Button
-					variant="contained"
-					color="primary"
-					onClick={handleClickRemove}
-				>
-					-
-				</Button>
-				<Button
-					variant="outlined"
-					color="error"
-					onClick={handleClickEmpty}
-				>
-					Vaciar
-				</Button>
-				<Button
-					variant="contained"
-					color="primary"
-					onClick={handleClickAdd}
-				>
-					+
-				</Button>
-			</ButtonGroup>
-		</Paper>
-	);
-};
+			<div className="btn-group">
+				<button onClick={handleClickRemove}>-</button>
+				<button onClick={handleClickEmpty}>Vaciar</button>
+				<button onClick={handleClickAdd}>+</button>
+			</div>
+		</div>
+	)
+}
