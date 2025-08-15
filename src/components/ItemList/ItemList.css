@@ -1,8 +1,16 @@
 .container {
-	display: grid;
-	justify-items: center;
-	align-content: center;
-	width: 250px;
-	height: auto;
-	grid-template-columns: 1fr 1fr 1fr;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  justify-items: stretch;
+  align-items: stretch;
+  align-content: start;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 16px;
+  grid-auto-rows: minmax(400px, auto);
 }
+
+/* ensure direct children (cards) fill grid cell */
+.container > * { height: 100%; width: 100%; }

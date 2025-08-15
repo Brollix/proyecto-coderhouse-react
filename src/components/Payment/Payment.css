@@ -1,0 +1,65 @@
+.payment {
+  max-width: 1100px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+.payment-card {
+  background: rgba(200, 215, 255, .06);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.payment h2 {
+  margin-bottom: 12px;
+}
+
+.payment-form {
+  margin-top: 24px;
+  display: grid;
+  gap: 12px;
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-field {
+  display: grid;
+  gap: 6px;
+}
+
+.form-field label {
+  font-weight: 600;
+  color: #c8d7ff;
+}
+
+.text-input {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(200, 215, 255, .25);
+  background: rgba(255,255,255, .05);
+  color: #e8efff;
+}
+
+.text-input::placeholder {
+  color: rgba(232,239,255,.6);
+}
+
+.text-input:focus {
+  outline: none;
+  border-color: rgba(200, 215, 255, .6);
+  box-shadow: 0 0 0 3px rgba(200, 215, 255, .15);
+}
+
+/* valid state when emails match */
+.text-input.is-valid {
+  border-color: rgba(60, 210, 120, .9);
+  box-shadow: 0 0 0 3px rgba(60, 210, 120, .2);
+}
+
+.payment-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 4px;
+}

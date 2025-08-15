@@ -1,7 +1,10 @@
 .icon-container {
-	display: 'flex';
+	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	gap: 1rem;
+	color: #0076d6;
 }
 
 .fas {
@@ -10,5 +13,64 @@
 	align-items: center;
 	margin-top: 100px;
 	font-size: 100px;
-	color: rgb(119, 173, 216);
+	color: rgb(111, 172, 221);
 }
+
+
+
+.products-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	padding: 8px 0 16px;
+	max-width: 1100px;
+	margin: 0 auto;
+	width: 100%;
+}
+
+.header-title { 
+	font-weight: 600; 
+	opacity: .9; 
+}
+
+.chips { 
+	display: flex; 
+	gap: 8px; 
+	flex-wrap: wrap; 
+}
+
+.filter-chip {
+	background: rgba(200, 215, 255, 0.12);
+	border: 1px solid rgba(200, 215, 255, 0.35);
+	color: #c8d7ff;
+	border-radius: 999px;
+	padding: 6px 10px;
+	font-size: 14px;
+}
+
+.clear-filters {
+	text-decoration: none;
+	color: #c8d7ff;
+	border: 1px solid rgba(200, 215, 255, 0.35);
+	padding: 6px 10px;
+	border-radius: 8px;
+}
+
+.clear-filters:hover {
+	background: rgba(200, 215, 255, 0.08);
+}
+
+.build-mini {
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+	gap: 12px;
+	padding: 10px 0 14px;
+	max-width: 1100px;
+	margin: 0 auto;
+	width: 100%;
+}
+.build-mini-left { display:flex; flex-direction:column; gap:8px; }
+.chip-x { margin-left:8px; background:transparent; border:none; color:#c8d7ff; cursor:pointer; }
+.build-mini-actions { display:flex; gap:8px; }

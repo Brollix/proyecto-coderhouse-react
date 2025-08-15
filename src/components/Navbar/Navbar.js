@@ -1,26 +1,35 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import DesktopWindowsIcon from '@mui/icons-material/DesktopWindows'
-import './Navbar.css'
-import { CartWidget } from '../CartWidget/CartWidget'
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
+import "./Navbar.css";
+import { useBuild } from "../../context/BuildContext";
 
 export const Navbar = () => {
-	return (
-		<div>
-			<ul className="appbar">
-				<Link to="/productos" style={{ textDecoration: 'none' }}>
-					<li className="navbar-logo">
-						<DesktopWindowsIcon className="logo" />
-						Monte Crypto
-					</li>
-				</Link>
+  const { build } = useBuild();
+  const itemCount = Object.keys(build).length;
 
-				<Link to="/cart" style={{ textDecoration: 'none' }}>
-					<li>
-						<CartWidget className="cart" />
-					</li>
-				</Link>
-			</ul>
-		</div>
-	)
-}
+  return (
+    <div className="navbar-container">
+      <ul className="appbar">
+        <Link to="/home" className="logo-link">
+          <li className="navbar-logo">
+            monte crypto
+          </li>
+        </Link>
+
+        <div className="nav-links">
+          <Link to="/productos" className="nav-link">
+            <li>Productos</li>
+          </Link>
+          <Link to="/armado" className="nav-link cart-link">
+            <li>
+              <span>Mi Armado</span>
+              {itemCount > 0 && (
+                <span className="cart-badge">{itemCount}</span>
+              )}
+            </li>
+          </Link>
+        </div>
+      </ul>
+    </div>
+  );
+};

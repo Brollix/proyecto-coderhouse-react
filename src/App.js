@@ -1,19 +1,21 @@
 import React from 'react'
-import { Navbar } from './components/Navbar/Navbar'
 import { BrowserRouter } from 'react-router-dom'
+import { CartProvider } from './context/CartContext'
+import { BuildProvider } from './context/BuildContext'
+import { Navbar } from './components/Navbar/Navbar'
 import { AppRouter } from './router/AppRouter'
 import './App.css'
-import { CartProvider } from './context/CartContext'
 
 function App() {
 	return (
-		<CartProvider>
-			<BrowserRouter>
-				<Navbar />
-				<h2>Productos: CPU, Motherboard y RAM</h2>
-				<AppRouter />
-			</BrowserRouter>
-		</CartProvider>
+		<BuildProvider>
+			<CartProvider>
+				<BrowserRouter>
+					<Navbar />					
+					<AppRouter />
+				</BrowserRouter>
+			</CartProvider>
+		</BuildProvider>
 	)
 }
 

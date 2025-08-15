@@ -20,12 +20,12 @@ export const ItemCount = ({ precio, cantidad, setCantidad }) => {
 
 	return (
 		<div>
-			<p>Cantidad: {cantidad}</p>
-			<p>Subtotal USD$ {cantidad * precio}</p>
+			<p>cantidad: {cantidad}</p>
+			<p>subtotal usd$ {cantidad * precio}</p>
 
 			<div className="btn-group">
 				<button onClick={handleClickRemove}>-</button>
-				<button onClick={handleClickEmpty}>Vaciar</button>
+				<button onClick={handleClickEmpty}>vaciar</button>
 				<button onClick={handleClickAdd}>+</button>
 			</div>
 		</div>

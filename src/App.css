@@ -4,6 +4,10 @@
 }
 
 body {
-	background-color: rgb(9, 0, 48);
+	background-color: rgb(0, 1, 20);
 	color: white;
+}
+
+.title{
+	text-align: center;
 }

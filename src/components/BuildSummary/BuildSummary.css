@@ -1,0 +1,79 @@
+.build {
+    max-width: 1100px;
+    margin: 24px auto;
+    padding: 0 16px;
+}
+
+.build-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.build-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.table-wrap {
+    overflow: auto;
+    border-radius: 10px;
+}
+
+.build-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(200, 215, 255, .06);
+}
+
+.build-table th,
+.build-table td {
+    padding: 12px;
+    border-bottom: 1px solid rgba(200, 215, 255, .15);
+    text-align: left;
+}
+
+.total-label {
+    text-align: right;
+    font-weight: 700;
+}
+
+.total-value {
+    font-weight: 700;
+}
+
+.build-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 12px;
+}
+
+.build-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 20px;
+    background: rgba(200, 215, 255, .06);
+    border-radius: 10px;
+}
+
+.build-empty a {
+    color: #c8d7ff;
+}
+
+/* Remove underline from button-like links */
+.build a.btn-add,
+.build a.btn-secondary,
+.btn-add,
+.btn-secondary {
+    text-decoration: none;
+}
+
+.build a.btn-add:hover,
+.build a.btn-secondary:hover,
+.btn-add:hover,
+.btn-secondary:hover {
+    text-decoration: none;
+}

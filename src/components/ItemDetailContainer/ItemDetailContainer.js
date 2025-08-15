@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import { useParams } from 'react-router'
-import { getDoc, doc } from 'firebase/firestore/lite'
-import { db } from '../../firebase/config'
+import { useParams } from 'react-router-dom'
+import { supabase } from '../../supabase/config'
 import { ItemDetail } from '../ItemDetail/ItemDetail'
 
 export const ItemDetailContainer = () => {
@@ -13,17 +12,44 @@ export const ItemDetailContainer = () => {
 	useEffect(() => {
 		setLoading(true)
 
-		const docRef = doc(db, 'productos', itemID)
-		getDoc(docRef)
-			.then((doc) => {
-				setItem({
-					id: doc.id,
-					...doc.data(),
-				})
-			})
-			.finally(() => {
+		const fetchItem = async () => {
+			let data = null
+			let error = null
+			try {
+				const isNumeric = !isNaN(Number(itemID))
+				if (isNumeric) {
+					// Prefer buscar por legacy_id cuando la URL es numérica
+					const res = await supabase
+						.from('stock')
+						.select('*')
+						.eq('legacy_id', Number(itemID))
+						.single()
+					data = res.data
+					error = res.error
+				} else {
+					const res = await supabase
+						.from('stock')
+						.select('*')
+						.eq('id', itemID)
+						.single()
+					data = res.data
+					error = res.error
+				}
+				console.log('Supabase item response', { data, error })
+				if (error || !data) {
+					console.error('Item no encontrado en Supabase:', itemID, error)
+					setItem(undefined)
+				} else {
+					setItem(data)
+				}
+			} catch (e) {
+				console.error('Unexpected error fetching item:', e)
+			} finally {
 				setLoading(false)
-			})
+			}
+		}
+
+		fetchItem()
 	}, [itemID])
 
 	return (

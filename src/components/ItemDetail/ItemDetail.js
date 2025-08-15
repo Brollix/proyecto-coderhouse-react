@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react'
 import { ItemCount } from '../ItemCount/ItemCount'
 import { CartContext } from '../../context/CartContext'
 import { Link } from 'react-router-dom'
+import { getImageUrl } from '../../supabase/storage'
 import './ItemDetail.css'
 
 export const ItemDetail = ({
@@ -21,10 +22,10 @@ export const ItemDetail = ({
 
 	if (tipo === 'CPU' || tipo === 'Motherboard') {
 		socketOption = socket[0]
-		ref = 'Socket: '
+		ref = 'socket: '
 	} else if (tipo === 'RAM') {
 		socketOption = socket[1]
-		ref = 'Memoria: '
+		ref = 'memoria: '
 	}
 
 	const [cantidad, setCantidad] = useState(0)
@@ -45,29 +46,38 @@ export const ItemDetail = ({
 		}
 	}
 
+	const imgSrc = getImageUrl(imagen)
+
 	return (
 		<div className="detail" key={id}>
-			<img src={imagen} alt={imagen} />
-			<h2>{tipo + ' ' + marca + ' ' + serie}</h2>
-			<p>
-				{ref}
-				{socketOption}
-			</p>
-			<h3>USD${precio}</h3>
-			<ItemCount
-				precio={precio}
-				cantidad={cantidad}
-				setCantidad={setCantidad}
-			/>
-
-			<Link to="/cart">
-				<button className="btn-add" onClick={handleAddToCart}>
-					Agregar al Carrito
-				</button>
-			</Link>
-			<Link to="/productos">
-				<button>Volver al inicio</button>
-			</Link>
+			<div className="col image-col">
+				<img src={imgSrc} alt={imagen} />
+			</div>
+			<div className="col info-col">				
+				<h1>{tipo}</h1>
+				<h2>{marca} {serie}</h2>
+				<p>
+					{ref}
+					{socketOption}
+				</p>
+				<h4>stock: {stock}</h4>
+				<h2>usd${precio}</h2>
+			</div>
+			<div className="col actions-col">
+				<ItemCount
+					precio={precio}
+					cantidad={cantidad}
+					setCantidad={setCantidad}
+				/>
+				<Link to="/cart">
+					<button className="btn-add" onClick={handleAddToCart}>
+						agregar al carrito
+					</button>
+				</Link>
+				<Link to="/productos">
+					<button className="btn-secondary">volver al inicio</button>
+				</Link>
+			</div>
 		</div>
 	)
 }
