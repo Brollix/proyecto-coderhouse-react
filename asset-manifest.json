@@ -1,22 +1,13 @@
 {
   "files": {
-    "main.css": "/proyecto-coderhouse-react/static/css/main.2b3f28e0.chunk.css",
-    "main.js": "/proyecto-coderhouse-react/static/js/main.743bfac1.chunk.js",
-    "main.js.map": "/proyecto-coderhouse-react/static/js/main.743bfac1.chunk.js.map",
-    "runtime-main.js": "/proyecto-coderhouse-react/static/js/runtime-main.4bc8b79c.js",
-    "runtime-main.js.map": "/proyecto-coderhouse-react/static/js/runtime-main.4bc8b79c.js.map",
-    "static/js/2.a0a1f14a.chunk.js": "/proyecto-coderhouse-react/static/js/2.a0a1f14a.chunk.js",
-    "static/js/2.a0a1f14a.chunk.js.map": "/proyecto-coderhouse-react/static/js/2.a0a1f14a.chunk.js.map",
+    "main.css": "/proyecto-coderhouse-react/static/css/main.65afafbc.css",
+    "main.js": "/proyecto-coderhouse-react/static/js/main.2f38eb3d.js",
     "index.html": "/proyecto-coderhouse-react/index.html",
-    "precache-manifest.4d7d98bab935d58aad8505da60357740.js": "/proyecto-coderhouse-react/precache-manifest.4d7d98bab935d58aad8505da60357740.js",
-    "service-worker.js": "/proyecto-coderhouse-react/service-worker.js",
-    "static/css/main.2b3f28e0.chunk.css.map": "/proyecto-coderhouse-react/static/css/main.2b3f28e0.chunk.css.map",
-    "static/js/2.a0a1f14a.chunk.js.LICENSE.txt": "/proyecto-coderhouse-react/static/js/2.a0a1f14a.chunk.js.LICENSE.txt"
+    "main.65afafbc.css.map": "/proyecto-coderhouse-react/static/css/main.65afafbc.css.map",
+    "main.2f38eb3d.js.map": "/proyecto-coderhouse-react/static/js/main.2f38eb3d.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.4bc8b79c.js",
-    "static/js/2.a0a1f14a.chunk.js",
-    "static/css/main.2b3f28e0.chunk.css",
-    "static/js/main.743bfac1.chunk.js"
+    "static/css/main.65afafbc.css",
+    "static/js/main.2f38eb3d.js"
   ]
 }
